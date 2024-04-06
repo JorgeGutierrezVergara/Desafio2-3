@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click en borde</title>
+  </head>
+  <body>
+    <div
+      style="
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <img
+        src="./assets/img/dog.jpeg"
+        alt="dog"
+        onclick="
+        var doggo = document.querySelector('img');
+        if (active){
+        active = false
+        doggo.style.border = '2px solid red';
+        }
+        else {
+        active = true
+        doggo.style.border = 'none';
+        }"
+      />
+    </div>
+    <script src="./assets/js/script1.js"></script>
+  </body>
+</html>

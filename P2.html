@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stickers</title>
+  </head>
+  <body>
+    <div
+      class="contenedor"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <h3>Puedes llevar hasta 10 stickers en total</h3>
+      <div style="display: flex">
+        <div
+          class="contenedor"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <img src="./assets/img/cat1.jpg" alt="cat1" style="width: 40%" />
+          <input type="text" id="cat1" />
+        </div>
+        <div
+          class="contenedor"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <img src="./assets/img/cat2.jpg" alt="cat2" style="width: 40%" />
+          <input type="text" id="cat2" />
+        </div>
+        <div
+          class="contenedor"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <img src="./assets/img/cat3.jpg" alt="cat3" style="width: 40%" />
+          <input type="text" id="cat3" />
+        </div>
+      </div>
+      <p></p>
+      <button
+        onclick="
+        cat1 = Number(document.querySelector('#cat1').value)
+        cat2 = Number(document.querySelector('#cat2').value)
+        cat3 = Number(document.querySelector('#cat3').value)
+        cats = cat1 + cat2 + cat3
+
+        if (cats <= 10){
+            total = document.querySelector('p')
+            total.innerHTML = 'llevas ' +  cats + ' stickers'
+        }
+        else{
+            parrafo = document.querySelector('p')
+            parrafo.innerHTML = 'Llevas demasiados stickers'
+        }
+      "
+      >
+        Verificar
+      </button>
+    </div>
+  </body>
+</html>

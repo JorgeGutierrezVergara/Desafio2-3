@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <h3>Password</h3>
+      <div style="display: flex; margin-bottom: 10px">
+        <select id="centena" name="centena">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select id="decena" name="decena">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select id="unidad" name="unidad">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+      <p style="display: none"></p>
+      <button
+        onclick="
+        parrafo = document.querySelector('p')
+        centena = document.querySelector('#centena').value
+        decena = document.querySelector('#decena').value
+        unidad = document.querySelector('#unidad').value
+        pass = centena + decena + unidad
+        if (pass === '911'){
+            parrafo.style.display = 'block';
+            parrafo.innerHTML = 'password 1 correcta'
+        }
+        else if(pass === '714'){
+            parrafo.style.display = 'block';
+            parrafo.innerHTML = 'password 2 correcta'
+        }
+        else{
+            parrafo.style.display = 'block';
+            parrafo.innerHTML = 'password incorrecta'
+        }"
+      >
+        ingresar
+      </button>
+    </div>
+  </body>
+</html>
